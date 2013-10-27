@@ -105,7 +105,7 @@
 
 
 <div id="eclipse-instructions" class="instructions tab-pane active">
-  <a name="using-eclipse"></a>
+  <a id="using-eclipse"></a>
 
   <div class="alert alert-warn">If you already created this app from the Heroku Eclipse Plugin, proceed to <a
       href="#step3">Step 3</a>.
@@ -267,7 +267,7 @@
 	                    </span>
     </li>
   </ol>
-  <a name="step3" id="step3"></a>
+  <a id="step3"></a>
 
   <h2>Step 3. Makes some changes to the app</h2>
   <ol>
@@ -343,7 +343,7 @@ c.orderBy(em.getCriteriaBuilder().asc(from.get("lastName")));
 
 
 <div id="cli-instructions" class="instructions tab-pane">
-  <a name="using-cli"></a>
+  <a id="using-cli"></a>
 
   <h2>Step 1. Setup your environment</h2>
   <ol>
