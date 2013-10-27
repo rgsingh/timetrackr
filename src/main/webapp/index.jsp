@@ -1,92 +1,83 @@
-<!doctype html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Example of using icons in buttons and button groups - Twitter Bootstrap version 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Example of using icons in buttons and button groups - Twitter Bootstrap version 2.0 from w3resource.com">
+    <meta name="author" content="">
 
-<html>
-<head>
-<meta charset="utf-8">
-<title>Spring MVC and Hibernate Template</title>
+    <!-- Le styles -->
+    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+	form {
+	margin-top: 50px;
+	}
+	</style>
+	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
 
-<meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link
-	href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css"
-	rel="stylesheet">
-<link
-	href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css"
-	rel="stylesheet">
-<link rel="stylesheet"
-	href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css">
-</head>
-
-<body>
-	<div class="navbar navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container">
-				<a href="/" class="brand">Spring MVC and Hibernate Template</a>
-			</div>
-		</div>
-	</div>
-
-	<div class="container" id="getting-started">
-		<div class="row">
-			<div class="span8 offset2">
-
-				<div class="page-header">
-					<h1>Contact Management Sample App</h1>
-				</div>
-
-				<div style="margin-bottom: 20px">
-					This is a template for a web application that uses Spring MVC and
-					Hibernate. The sample code is a simple CRUD page that manipulates
-					records for a single model object. To try it out go to the <a
-						href="/people/">people page</a>. Then use Eclipse or the Command
-					Line to deploy some changes.
-				</div>
-
-
-				<div class="tabbable">
-					<ul class="nav nav-tabs">
-						<li class="active"><a href="#pane1" data-toggle="tab">Tab
-								1</a></li>
-						<li><a href="#pane2" data-toggle="tab">Tab 2</a></li>
-						<li><a href="#pane3" data-toggle="tab">Tab 3</a></li>
-						<li><a href="#pane4" data-toggle="tab">Tab 4</a></li>
-						<li><a href="/people" data-toggle="tab">People</a></li>
-						
-					</ul>
-					<div class="tab-content">
-						<div id="pane1" class="tab-pane active">
-							<h4>The Markup</h4>
-							<pre>Code here ...</pre>
-						</div>
-						<div id="pane2" class="tab-pane">
-							<h4>Pane 2 Content</h4>
-							<p>and so on ...</p>
-						</div>
-						<div id="pane3" class="tab-pane">
-							<h4>Pane 3 Content</h4>
-						</div>
-						<div id="pane4" class="tab-pane">
-							<h4>Pane 4 Content</h4>
-						</div>
-					</div>
-					<!-- /.tab-content -->
-				</div>
-				<!-- /.tabbable -->
-
-			</div>
-			<!-- end span8 offset2 -->
-		</div>
-		<!-- end row -->
-
-
-	</div>
-
-
-	<script src="http://twitter.github.com/bootstrap/assets/js/jquery.js"></script>
-	<script
-		src="http://twitter.github.com/bootstrap/assets/js/bootstrap-modal.js"></script>
-	<script
-		src="http://twitter.github.com/bootstrap/assets/js/bootstrap-tab.js"></script>
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="twitter-bootstrap-v2/docs/examples/images/favicon.ico">
+    <link rel="apple-touch-icon" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+    <div class="span4">
+      <div class="btn-toolbar" style="margin-bottom: 9px">
+        <div class="btn-group">
+          <a class="btn" href="#"><i class="icon-align-left"></i></a>
+          <a class="btn" href="#"><i class="icon-align-center"></i></a>
+          <a class="btn" href="#"><i class="icon-align-right"></i></a>
+          <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+        </div>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+          <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="/people/"><i class="icon-pencil"></i> People</a></li>
+            <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li class="divider"></li>
+            <li><a href="#"><i class="i"></i> Make admin</a></li>
+          </ul>
+        </div>
+      </div>
+      <p>
+        <a class="btn" href="#"><i class="icon-refresh"></i> Refresh</a>
+        <a class="btn btn-success" href="#"><i class="icon-shopping-cart icon-white"></i> Checkout</a>
+        <a class="btn btn-danger" href="#"><i class="icon-trash icon-white"></i> Delete</a>
+      </p>
+      <p>
+        <a class="btn btn-large" href="#"><i class="icon-comment"></i> Comment</a>
+        <a class="btn btn-small" href="#"><i class="icon-cog"></i> Settings</a>
+        <a class="btn btn-small btn-info" href="#"><i class="icon-info-sign icon-white"></i> More Info</a>
+      </p>
+    </div>
+   	</div>
+    </div>
+     <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-transition.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-alert.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-modal.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tab.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tooltip.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-popover.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-button.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>
+    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-typeahead.js"></script>
 </body>
 </html>
+            
