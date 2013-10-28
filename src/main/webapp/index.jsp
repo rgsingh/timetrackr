@@ -116,7 +116,8 @@
 
     <!-- Javascript -->
     <script src="webjars/jquery/1.9.0/jquery.js"></script>
-    <script src="webjars/bootstrap/3.0.0/js/bootstrap.js"></script>
+    <!-- script src="webjars/bootstrap/3.0.0/js/bootstrap.js"></script-->
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
             
