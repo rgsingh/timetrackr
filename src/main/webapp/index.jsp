@@ -2,28 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Example of using icons in buttons and button groups - Twitter Bootstrap version 2.0</title>
+    <title>Bootstrap v3.0.0 example page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Example of using icons in buttons and button groups - Twitter Bootstrap version 2.0 from w3resource.com">
+    <meta name="description" content="Bootstrap v3.0.0 example page">
     <meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="twitter-bootstrap-v2/docs/assets/css/bootstrap.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="webjars/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 	form {
 	margin-top: 50px;
 	}
 	</style>
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
+    <!--[if lt IE 9]> 
+    	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
     <![endif]-->
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="twitter-bootstrap-v2/docs/examples/images/favicon.ico">
-    <link rel="apple-touch-icon" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="twitter-bootstrap-v2/docs/examples/images/apple-touch-icon-114x114.png">
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://github.com/twbs/bootstrap/blob/master/docs-assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="https://github.com/twbs/bootstrap/blob/master/docs-assets/ico/favicon.png">    
   </head>
   <body>
     <div class="container">
@@ -62,22 +61,10 @@
     </div>
    	</div>
     </div>
-     <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="twitter-bootstrap-v2/docs/assets/js/jquery.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-transition.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-alert.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-modal.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-dropdown.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tab.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-tooltip.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-popover.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-button.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-collapse.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-carousel.js"></script>
-    <script src="twitter-bootstrap-v2/docs/assets/js/bootstrap-typeahead.js"></script>
+
+    <!-- Javascript -->
+    <script src="webjars/jquery/1.9.0/jquery.js"></script>
+    <script src="webjars/bootstrap/3.0.0/js/bootstrap.js"></script>
 </body>
 </html>
             
