@@ -15,7 +15,7 @@
 	margin-top: 50px;
 	}
 	</style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
     <!--[if lt IE 9]> 
@@ -117,7 +117,7 @@
     <!-- Javascript -->
     <script src="webjars/jquery/1.9.0/jquery.js"></script>
     <!-- script src="webjars/bootstrap/3.0.0/js/bootstrap.js"></script-->
-    <script src="js/bootstrap.js"></script>
+    <script src="resources/js/bootstrap.js"></script>
 </body>
 </html>
             
