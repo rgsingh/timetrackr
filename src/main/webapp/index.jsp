@@ -10,11 +10,12 @@
     <!-- Styles -->
     <!-- link href="webjars/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet"-->
     <link href="resources/css/bootstrap.css" rel="stylesheet">
-	<style type="text/css">
-	form {
-	margin-top: 50px;
-	}
-	</style>
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
     <link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
