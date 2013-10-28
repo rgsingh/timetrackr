@@ -9,7 +9,7 @@
 
     <!-- Styles -->
     <!-- link href="webjars/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet"-->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="resources/css/bootstrap.css" rel="stylesheet">
 	<style type="text/css">
 	form {
 	margin-top: 50px;
