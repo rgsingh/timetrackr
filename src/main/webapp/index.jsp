@@ -26,7 +26,7 @@
 
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value="resources/img/apple-touch-icon-144-precomposed.png"/>">
-    <link rel="shortcut icon" href="<c:url values="resources/img/favicon.png"/>">    
+    <link rel="shortcut icon" href="<c:url value="resources/img/favicon.png"/>">    
   </head>
   <body>
     
