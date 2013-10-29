@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!doctype html>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -9,14 +10,14 @@
 
     <!-- Styles -->
     <!-- link href="webjars/bootstrap/3.0.0/css/bootstrap.css" rel="stylesheet"-->
-    <link href="resources/css/bootstrap.css" rel="stylesheet">
+    <link href="<c:url value="resources/css/bootstrap.css"/>" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="<c:url value="resources/css/bootstrap-responsive.css"/>" rel="stylesheet">
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
     <!--[if lt IE 9]> 
@@ -24,8 +25,8 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://github.com/twbs/bootstrap/blob/master/docs-assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="shortcut icon" href="https://github.com/twbs/bootstrap/blob/master/docs-assets/ico/favicon.png">    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value="images/apple-touch-icon-144-precomposed.png"/>">
+    <link rel="shortcut icon" href="<c:url values="images/favicon.png"/>">    
   </head>
   <body>
     
@@ -125,9 +126,9 @@
 	</div>
 
     <!-- Javascript -->
-    <script src="webjars/jquery/1.9.0/jquery.js"></script>
+    <script src="<c:url value="webjars/jquery/1.9.0/jquery.js"/>"></script>
     <!-- script src="webjars/bootstrap/3.0.0/js/bootstrap.js"></script-->
-    <script src="resources/js/bootstrap.js"></script>
+    <script src="<c:url value="resources/js/bootstrap.js"/>"></script>
 </body>
 </html>
             
