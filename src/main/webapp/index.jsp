@@ -77,12 +77,12 @@
           <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
           <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="/people/" data-target="#people" data-toggle="modal" class="btn"><i class="icon-pencil"></i> People</a></li>
-            <li><a href="#" class="btn"><i class="icon-pencil"></i> Edit</a></li>
-            <li><a href="#" class="btn"><i class="icon-trash"></i> Delete</a></li>
-            <li><a href="#" class="btn"><i class="icon-ban-circle"></i> Ban</a></li>
+            <li><a href="/people/" data-target="#people" data-toggle="modal"><i class="icon-pencil"></i> People</a></li>
+            <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+            <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+            <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
             <li class="divider"></li>
-            <li><a href="#" class="btn"><i class="i"></i> Make admin</a></li>
+            <li><a href="#"><i class="i"></i> Make admin</a></li>
           </ul>
         </div>
       </div>
@@ -114,7 +114,7 @@
 
     </div> <!-- /container -->    
     
-	<div class="modal fade" id="people" role="dialog">
+	<div class="modal fade" id="people">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
