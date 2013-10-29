@@ -77,7 +77,7 @@
           <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
           <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#people" data-toggle="modal"><i class="icon-pencil"></i> People</a></li>
+            <li><a href="/people/" data-target="#people" data-toggle="modal"><i class="icon-pencil"></i> People</a></li>
             <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
             <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
             <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
@@ -118,7 +118,7 @@
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
-					<jsp:include page="/people/people.jsp"/>
+					<h3 id="myModalHeader">Modal header</h3>
 				</div>
 			</div>
 		</div>	
