@@ -28,7 +28,7 @@ public class PersonController {
         return "people/people";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
+    @RequestMapping(value = "add", method = RequestMethod.POST)
     public String addPerson(@ModelAttribute("person") Person person, BindingResult result) {
 
         personService.addPerson(person);
@@ -36,7 +36,7 @@ public class PersonController {
         return "people/people";
     }
 
-    @RequestMapping("/delete/{personId}")
+    @RequestMapping("delete/{personId}")
     public String deletePerson(@PathVariable("personId") Integer personId) {
 
         personService.removePerson(personId);
