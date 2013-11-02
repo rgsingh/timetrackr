@@ -1,22 +1,25 @@
 <!doctype html>
 <%@tag description="Main Page Layout" pageEncoding="UTF-8"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@attribute name="header" fragment="true" %>
 <%@attribute name="footer" fragment="true" %>
 <html lang="en">
   <head>
-
+    <c:set var="url">${pageContext.request.requestURL}</c:set>
+    <base href="${fn:substring(url, 0, fn:length(url) - fn:length(pageContext.request.requestURI))}${pageContext.request.contextPath}/" />
+    
     <jsp:invoke fragment="header"/>
 
     <!-- Styles -->
-    <link href="<c:url value="${pageContext.request.contextPath}/resources/css/bootstrap.css"/>" rel="stylesheet">
+    <link href="<c:url value="resources/css/bootstrap.css"/>" rel="stylesheet">
     <style type="text/css">
       body {
         padding-top: 60px;
         padding-bottom: 40px;
       }
     </style>
-    <link href="<c:url value="${pageContext.request.contextPath}/resources/css/bootstrap-responsive.css"/>" rel="stylesheet">
+    <link href="<c:url value="resources/css/bootstrap-responsive.css"/>" rel="stylesheet">
 	
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
     <!--[if lt IE 9]> 
@@ -24,8 +27,8 @@
     <![endif]-->
 
     <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value="${pageContext.request.contextPath}/resources/img/apple-touch-icon-144-precomposed.png"/>">
-    <link rel="shortcut icon" href="<c:url value="${pageContext.request.contextPath}/resources/img/favicon.png"/>">    
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value="resources/img/apple-touch-icon-144-precomposed.png"/>">
+    <link rel="shortcut icon" href="<c:url value="resources/img/favicon.png"/>">    
   </head>
   
   <body>
@@ -75,7 +78,7 @@
     </footer>
     
     <!-- Javascript -->
-    <script src="<c:url value="${pageContext.request.contextPath}/webjars/jquery/1.9.0/jquery.js"/>"></script>
-    <script src="<c:url value="${pageContext.request.contextPath}/resources/js/bootstrap.js"/>"></script>
+    <script src="<c:url value="webjars/jquery/1.9.0/jquery.js"/>"></script>
+    <script src="<c:url value="resources/js/bootstrap.js"/>"></script>
   </body>
 </html>
