@@ -49,13 +49,13 @@
 		            </c:if>
 		        </div>
 		    </div>
-		    
-	      <jsp:attribute name="header">
-	         <p>&copy; RGS Infotech, LLC 2013</p>
-	      </jsp:attribute>	    
-		    
+
 		</div> <!-- end container --> 
     </jsp:body>
-
+		    
+    <jsp:attribute name="header">
+       <p>&copy; RGS Infotech, LLC 2013</p>
+    </jsp:attribute>	    
+		    
 </t:generic-page>
             
