@@ -4,7 +4,6 @@
 <%@attribute name="header" fragment="true" %>
 <%@attribute name="footer" fragment="true" %>
 <html lang="en">
-
   <head>
 
     <jsp:invoke fragment="header"/>
