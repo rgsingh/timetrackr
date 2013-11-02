@@ -1,5 +1,6 @@
 <!doctype html>
 <%@tag description="Main Page Layout" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@attribute name="header" fragment="true" %>
 <%@attribute name="footer" fragment="true" %>
 <html lang="en">
