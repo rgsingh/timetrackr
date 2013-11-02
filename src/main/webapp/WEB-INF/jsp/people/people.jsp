@@ -10,7 +10,11 @@
 	  <meta name="description" content="Spring MVC Bootstrap People Page">
 	  <meta name="author" content="">
     </jsp:attribute>
-     
+		    
+    <jsp:attribute name="footer">
+       <p>&copy; RGS Infotech, LLC 2013</p>
+    </jsp:attribute>	    
+         
     <jsp:body>
 		<div class="container">
 		    <div class="row">
@@ -52,10 +56,6 @@
 
 		</div> <!-- end container --> 
     </jsp:body>
-		    
-    <jsp:attribute name="header">
-       <p>&copy; RGS Infotech, LLC 2013</p>
-    </jsp:attribute>	    
 		    
 </t:generic-page>
             
