@@ -73,7 +73,7 @@
     <div id="body">
       <jsp:doBody/>
     </div>
-    <footer>
+    <footer class="navbar navbar-fixed-bottom">
       <jsp:invoke fragment="footer"/>
     </footer>
     
