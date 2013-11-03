@@ -18,6 +18,9 @@
         padding-top: 60px;
         padding-bottom: 40px;
       }
+      footer {
+      	text-align: center;
+      }
     </style>
     <link href="<c:url value="resources/css/bootstrap-responsive.css"/>" rel="stylesheet">
 	
@@ -73,7 +76,7 @@
     <div id="body">
       <jsp:doBody/>
     </div>
-    <footer class="navbar navbar-fixed-bottom footer">
+    <footer class="navbar navbar-fixed-bottom">
       <jsp:invoke fragment="footer"/>
     </footer>
     
