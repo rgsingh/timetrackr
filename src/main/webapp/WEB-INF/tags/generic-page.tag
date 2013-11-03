@@ -21,6 +21,11 @@
       footer {
       	text-align: center;
       }
+      
+      /* Bootstrap specific CSS */
+      .dropdown-backdrop {
+      	position: static;
+      }
     </style>
     <link href="<c:url value="resources/css/bootstrap-responsive.css"/>" rel="stylesheet">
 	
