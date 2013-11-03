@@ -33,7 +33,7 @@ public class PersonController {
 
         personService.addPerson(person);
 
-        return "people/people";
+        return "redirect:/people/people";
     }
 
     @RequestMapping("/delete/{personId}")
@@ -41,6 +41,6 @@ public class PersonController {
 
         personService.removePerson(personId);
 
-        return "people/people";
+        return "redirect:/people/people";
     }
 }
