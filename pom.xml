@@ -2,7 +2,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>nameless-tundar-1489</artifactId>
+    <artifactId>nameless-tundra-1489</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -63,12 +63,7 @@
             <artifactId>webapp-runner</artifactId>
             <version>7.0.34.0</version>
             <scope>provided</scope>
-        </dependency>
-		<dependency>
-		    <groupId>org.webjars</groupId>
-		    <artifactId>bootstrap</artifactId>
-		    <version>3.0.0</version>
-		</dependency>        
+        </dependency>       
     </dependencies>
 
     <build>
@@ -118,6 +113,26 @@
 				  </webApp>
 				</configuration>                
             </plugin>
+	      <plugin>
+		<groupId>org.apache.tomcat.maven</groupId>
+		<artifactId>tomcat7-maven-plugin</artifactId>
+		<version>2.2</version>
+		<executions>
+		  <execution>
+		    <id>tomcat-run</id>
+		    <goals>
+		      <goal>exec-war-only</goal>
+		    </goals>
+		    <phase>package</phase>
+			<configuration>
+			  <scanIntervalSeconds>10</scanIntervalSeconds>
+			  <webApp>
+			    <contextPath>/nameless-tundra-1489</contextPath>
+			  </webApp>
+			</configuration> 
+		  </execution>
+		</executions>
+	      </plugin>
         </plugins>
     </build>
 </project>
