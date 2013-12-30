@@ -8,10 +8,10 @@
 <t:generic-page>
     <jsp:attribute name="header">
 	  <meta charset="utf-8">
-	  <title>Spring MVC Bootstrap People Page</title>
+	  <title>Clients</title>
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	  <meta name="description" content="Spring MVC Bootstrap People Page">
-	  <meta name="author" content="">
+	  <meta name="description" content="Clients">
+	  <meta name="author" content="RGS Infotech, LLC">
     </jsp:attribute>
 		    
     <jsp:attribute name="footer">
@@ -23,7 +23,7 @@
 		    <div class="row">
 		        <div class="span8 offset2">
 		            <div class="page-header">
-		                <h1>Soylent Green Club Roster</h1>
+		                <h1>Clients</h1>
 		            </div>
 		            <form:form method="post" action="people/add" commandName="person" class="form-vertical">
 		

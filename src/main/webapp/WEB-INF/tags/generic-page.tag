@@ -13,22 +13,10 @@
 
     <!-- Styles -->
     <link href="<c:url value="resources/css/bootstrap.css"/>" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      footer {
-      	text-align: center;
-      }
-      
-      /* Bootstrap specific CSS */
-      .dropdown-backdrop {
-      	position: static;
-      }
-    </style>
     <link href="<c:url value="resources/css/bootstrap-responsive.css"/>" rel="stylesheet">
-	
+    <link href="<c:url value="resources/css/bootstrap-extensions.css"/>" rel="stylesheet">
+    <link href="<c:url value="resources/css/site.css"/>" rel="stylesheet">	
+    
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements --> 
     <!--[if lt IE 9]> 
     	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
@@ -48,22 +36,18 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">Project name</a>
+          <a class="brand" href="#">Time Trackr</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#contact">Contact</a></li>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Actions <b class="caret"></b></a>
                 <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li class="divider"></li>
-                  <li class="nav-header">Nav header</li>
-                  <li><a href="#">Separated link</a></li>
-                  <li><a href="#">One more separated link</a></li>
+                  <li><a href="#">Clients</a></li>
+                  <li><a href="#">Projects</a></li>
+                  <li><a href="#">Time Tracking</a></li>
                 </ul>
               </li>
             </ul>

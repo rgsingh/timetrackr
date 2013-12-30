@@ -1,0 +1,22 @@
+
+/**
+ * 	A more rounded button
+ */
+.btn {
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+}
+
+
+/**
+ * Extra large button extensions. Extends `.btn`.
+ */
+.btn-xlarge {
+    padding: 18px 28px;
+    font-size: 22px;
+    line-height: normal;
+    -webkit-border-radius: 8px;
+       -moz-border-radius: 8px;
+            border-radius: 8px;
+}
