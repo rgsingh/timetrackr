@@ -2,7 +2,7 @@
 <project>
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
-    <artifactId>nameless-tundra-1489</artifactId>
+    <artifactId>timetrackr</artifactId>
     <packaging>war</packaging>
     <version>0.0.1-SNAPSHOT</version>
 
@@ -109,7 +109,7 @@
 				<configuration>
 				  <scanIntervalSeconds>10</scanIntervalSeconds>
 				  <webApp>
-				    <contextPath>/nameless-tundra-1489</contextPath>
+				    <contextPath>/timetrackr</contextPath>
 				  </webApp>
 				</configuration>                
             </plugin>
@@ -127,7 +127,7 @@
 			<configuration>
 			  <scanIntervalSeconds>10</scanIntervalSeconds>
 			  <webApp>
-			    <contextPath>/nameless-tundra-1489</contextPath>
+			    <contextPath>/timetrackr</contextPath>
 			  </webApp>
 			</configuration> 
 		  </execution>
