@@ -1,5 +1,6 @@
 package com.example.controller;
 
+
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,7 +38,7 @@ public class PersonController {
     	
         return "people/preview";
     }    
-    
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addPerson(@ModelAttribute("person") Person person, BindingResult result) {
 
@@ -45,7 +46,7 @@ public class PersonController {
 
         return "redirect:/people/";
     }
-    
+
     @RequestMapping("/delete/{personId}")
     public String deletePerson(@PathVariable("personId") Integer personId) {
 

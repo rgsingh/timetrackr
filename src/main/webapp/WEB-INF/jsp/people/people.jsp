@@ -35,7 +35,6 @@
 		                <input type="submit" value="Add Person" class="btn" name="person" data-id="person"/>
 		                <input type="submit" value="Preview" class="btn" name="preview" data-id="preview"/>
 		            </form:form>
-
 		
 		            <c:if  test="${!empty peopleList}">
 		                <h3>People</h3>
