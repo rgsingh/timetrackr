@@ -75,5 +75,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script>    window.jQuery.ui || document.write('<script src="resources/js/jquery-ui-1.10.1.min.js"><\/script>')</script>    
     <script src="<c:url value="resources/js/bootstrap.js"/>"></script>
+    <script src="<c:url value="resources/js/person.js"/>"></script>
+    
   </body>
 </html>
