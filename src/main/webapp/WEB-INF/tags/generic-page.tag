@@ -25,6 +25,7 @@
     <!-- Fav and touch icons -->
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<c:url value="resources/img/apple-touch-icon-144-precomposed.png"/>">
     <link rel="shortcut icon" href="<c:url value="resources/img/favicon.png"/>">    
+    
   </head>
   
   <body>
@@ -75,5 +76,7 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script>    window.jQuery.ui || document.write('<script src="resources/js/jquery-ui-1.10.1.min.js"><\/script>')</script>    
     <script src="<c:url value="resources/js/bootstrap.js"/>"></script>
+    <script src="<c:url value="resources/js/person.js"/>"></script>
+
   </body>
 </html>

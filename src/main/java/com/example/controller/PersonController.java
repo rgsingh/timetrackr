@@ -1,7 +1,11 @@
 package com.example.controller;
 
+
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -10,8 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.model.Person;
 import com.example.service.PersonService;
-
-import java.util.Map;
 
 @Controller
 public class PersonController {
@@ -25,15 +27,24 @@ public class PersonController {
         map.put("person", new Person());
         map.put("peopleList", personService.listPeople());
 
-        return "people/people";
+        return "client/people";
     }
+
+    @RequestMapping(value = "/preview", method = RequestMethod.POST)
+    public String previewPerson(@ModelAttribute("person") Person person, ModelMap model) {
+
+        model.addAttribute("firstName", person.getFirstName());
+        model.addAttribute("lastName", person.getLastName());
+    	
+        return "client/preview";
+    }    
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addPerson(@ModelAttribute("person") Person person, BindingResult result) {
 
         personService.addPerson(person);
 
-        return "redirect:/people/";
+        return "redirect:/";
     }
 
     @RequestMapping("/delete/{personId}")
@@ -41,6 +52,6 @@ public class PersonController {
 
         personService.removePerson(personId);
 
-        return "redirect:/people/";
+        return "redirect:/";
     }
 }
