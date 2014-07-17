@@ -3,7 +3,7 @@
 	var peopleApplication = function(){
 		
 	    var context = "/timetrackr/",
-	        redirectTo = context
+	        redirectTo = context,
 	        protocolSlashes = $(location).attr("protocol").concat("//"),
 	        protocolHostname = protocolSlashes.concat($(location).attr("hostname")),
 	        hostnamePort = (protocolHostname.concat(":")).concat($(location).attr("port")),
@@ -51,6 +51,7 @@
         	  '<input type="text" name="firstName" value="' + firstName + '" />' +
         	  '<input type="text" name="lastName" value="' + lastName + '" />' +
         	  '</form>');
+        	
         	$('body').append(previewForm);
         	$(previewForm).submit();        	
         	

@@ -49,6 +49,7 @@
 		                <form:input path="lastName" name="lastName"/>
 		                <input type="submit" value="Add Person" class="btn" name="person" data-person="person"/>
 		                <input type="submit" value="Preview" class="btn" name="preview" data-preview="preview"/>
+
 		            </form:form>
 		
 		            <c:if  test="${!empty peopleList}">
