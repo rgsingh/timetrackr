@@ -7,9 +7,12 @@
                            http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
                            http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-
     <context:component-scan base-package="com.example.controller" />
     <mvc:annotation-driven/>
+
+    <!--causes Error creating bean with name 'requestMappingHandlerMapping' when run within controller integration test
+    <mvc:annotation-driven/>
+    -->
  
     <!-- Map DispatcherServlet to "/" and allow container's default servlet to handle static resources. -->
 	<mvc:default-servlet-handler/>

@@ -1,0 +1,46 @@
+<?xml  version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="
+  	http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+  	http://www.springframework.org/schema/util  http://www.springframework.org/schema/util/spring-util.xsd">
+	<!-- Root Context: defines shared resources visible to all other web components -->
+
+    
+    <import resource="security/security-context.xml"/>
+    <import resource="db/database-context.xml"/>
+
+    <beans profile="dev,test">
+    	<!-- 
+      <util:properties id="timetrackrProp" location="classpath:props/prod/timetrackr.properties, 
+      		classpath:props/prod/timetrackr-messages.properties" />
+      -->
+      <bean id="timetrackrProps" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+          <property name="locations">
+              <list>
+                  <value>classpath:props/dev/timetrackr.properties</value>
+                  <value>classpath:props/dev/timetrackr-messages.properties</value>
+              </list>
+          </property>
+          <property name="ignoreUnresolvablePlaceholders" value="false"/>
+      </bean>
+    </beans>
+    <beans profile="prod">
+      <!-- 
+      <util:properties id="timetrackrProp" location="classpath:props/prod/timetrackr.properties, 
+      		classpath:props/prod/timetrackr-messages.properties" />
+      -->
+      <bean id="timetrackrProps" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+          <property name="locations">
+              <list>
+                  <value>classpath:props/prod/timetrackr.properties</value>
+                  <value>classpath:props/prod/timetrackr-messages.properties</value>
+              </list>
+          </property>
+          <property name="ignoreUnresolvablePlaceholders" value="false"/>
+      </bean>
+      
+    </beans>
+
+    
+</beans>

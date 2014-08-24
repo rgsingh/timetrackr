@@ -7,6 +7,6 @@ public enum TimeTrackrAuthority implements GrantedAuthority {
  
     @Override
     public String getAuthority() {
-        return name();
+        return toString();
     }
 }
