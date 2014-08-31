@@ -18,8 +18,8 @@ public class JpaPersonDAO implements PersonDAO {
 
     @Override
     public Person getById(int personId) {
-//        return em.find(Person.class, personId);
-    	return em.getReference(Person.class, personId);
+        return em.find(Person.class, personId);
+//    	return em.getReference(Person.class, personId);
     }
 
     @Override
@@ -35,7 +35,9 @@ public class JpaPersonDAO implements PersonDAO {
 
     @Override
     public void delete(Person person) {
-    	em.remove(getContainedOrMerged(person));
+    	em.detach(person);
+        Person personDeleted = getById(person.getId());
+    	em.remove(getContainedOrMerged(personDeleted));
     }
     
     private Person getContainedOrMerged(Person person){

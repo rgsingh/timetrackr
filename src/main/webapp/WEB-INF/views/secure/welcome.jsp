@@ -12,10 +12,6 @@
           <meta name="author" content="RGS Infotech, LLC">
     </jsp:attribute>
 
-	<jsp:attribute name="footer">
-       <p>&copy; RGS Infotech, LLC 2013</p>
-    </jsp:attribute>
-
 	<jsp:body>
             <div class="container">
         

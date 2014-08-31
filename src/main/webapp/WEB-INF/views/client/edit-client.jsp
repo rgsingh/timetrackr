@@ -15,30 +15,25 @@
           <meta name="author" content="RGS Infotech, LLC">
     </jsp:attribute>
 
-	<jsp:attribute name="footer">
-       <p>&copy; RGS Infotech, LLC 2013</p>
-    </jsp:attribute>
-
 	<jsp:body>
     
         <div id="main" class="container">
             <div class="row">
                 <div class="span8 offset2">
             <div id="result"></div>
-                    <div class="page-header">
-                        <h1>Update Client</h1>
-                    </div>
+                    <h3>Update Client</h3>
 
-                    <form:form method="get"
-						action="${pageContext.request.contextPath}/clients/update/${person.id}"
-						commandName="client" class="form-vertical" id="clientUpdateForm">
+                    <form:form method="post" action=""
+						modelAttribute="client" class="form-vertical"
+						id="clientUpdateForm">
 
                         <form:label path="firstName">First Name</form:label>
-                        <form:input path="firstName" name="firstName" path="firstName"/>
+                        <form:input path="firstName" name="firstName" />
                         <form:label path="lastName">Last Name</form:label>
-                        <form:input path="lastName" name="lastName" path="lastName"/>
+                        <form:input path="lastName" name="lastName" />
+                        <form:hidden path="id" />
                         <input type="submit" value="Update Person"
-							class="btn" name="client" data-client="client" />
+							class="btn" name="client" data-client="update" />
                     </form:form>
 
                 </div>

@@ -15,32 +15,21 @@
           <meta name="author" content="RGS Infotech, LLC">
     </jsp:attribute>
 
-	<jsp:attribute name="footer">
-       <p>&copy; RGS Infotech, LLC 2013</p>
-    </jsp:attribute>
-
 	<jsp:body>
         <div class="container">
             <div class="row">
                 <div class="span8 offset2">
-                    <div class="page-header">
-                        <h1>Clients</h1>
-                    </div>
+                    <h3>Clients</h3>
                     <p>If the following is correct, please click "Add Person"</p>
-                    <form:form method="post"
-						action="${pageContext.request.contextPath}/add"
-						commandName="clients" class="form-vertical" id="personForm">
+                    <form:form method="post" action=""
+						modelAttribute="client" class="form-vertical" id="clientForm">
 
                         <form:label path="firstName">First Name</form:label>
                         <form:label path="firstName">${firstName}</form:label>
-                        <form:input style="display:none"
-							path="firstName" name="firstName" />
                         <form:label path="lastName">Last Name</form:label>
                         <form:label path="lastName">${lastName}</form:label>
-                        <form:input style="display:none" path="lastName"
-							name="lastName" />
-                        <input type="submit" value="Add Person"
-							class="btn" data-person="person" />
+                        <input type="submit" value="Add Client"
+							class="btn" name="client" data-client="add" />
                     </form:form>
 
                 </div>

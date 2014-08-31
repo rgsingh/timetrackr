@@ -1,12 +1,66 @@
-body {
-  padding-top: 60px;
-  padding-bottom: 40px;
+.alpha60 {
+    /* Fallback for web browsers that don't support RGBa */
+    background-color: rgb(0, 0, 0);
+    /* RGBa with 0.6 opacity */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* For IE 5.5 - 7*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+    /* For IE 8*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
 }
-footer {
-  text-align: center;
+
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+
+#main {
+   margin: 5em 0 .5em 0;
+}
+
+/* Wrapper for page content to push down footer */
+#wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -100px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 100px;
+}
+
+#footer {
+    background-color: #f5f5f5;
+}
+
+.footer-content {
+   margin: 0 auto; 
+   width: 50%;
 }
   
-  /* Bootstrap specific CSS */
-  .dropdown-backdrop {
+/* Bootstrap specific CSS */
+.dropdown-backdrop {
   position: static;
 }
+
+/****************************************************/
+/* Media queries */
+@media (min-width: 768px) {
+
+}
+/* Lastly, apply responsive CSS fixes as necessary 
+
+@media (max-width: 767px) {
+    #footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+*/

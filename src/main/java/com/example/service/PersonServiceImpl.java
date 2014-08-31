@@ -37,9 +37,10 @@ public class PersonServiceImpl implements PersonService {
 
     @Override
     @Transactional
-	public void deletePersonById(Integer personId) {
-		Person personFromDb = getPersonById(personId);
+	public Person deletePersonById(Integer personId) {
+		Person personFromDb = getPersonById(personId);		
 		personDao.delete(personFromDb);
+		return personFromDb;
 	}
 
     @Override
@@ -48,31 +49,5 @@ public class PersonServiceImpl implements PersonService {
 		// TODO Auto-generated method stub
 
 	}
-	/*
-	 * @PersistenceContext(unitName="contactPU") EntityManager em;
-	 * 
-	 * public List<Person> listPeople() { CriteriaQuery<Person> c =
-	 * em.getCriteriaBuilder().createQuery(Person.class); c.from(Person.class);
-	 * return em.createQuery(c).getResultList(); }
-	 * 
-	 * public void addPerson(Person person) { em.persist(person); }
-	 * 
-	 * public void removePerson(Integer id) {
-	 * em.remove(em.getReference(Person.class, id)); }
-	 * 
-	 * public void updatePerson(Person person) { Person updateablePerson =
-	 * getPerson(person.getId()); if (null != updateablePerson) {
-	 * updateablePerson.setFirstName(person.getFirstName());
-	 * updateablePerson.setLastName(person.getLastName());
-	 * updateablePerson.setSelected(true); em.persist(updateablePerson); } }
-	 * 
-	 * public Person getPerson(Integer id) { return em.find(Person.class, id); }
-	 * 
-	 * public void markPerson(Integer id) { Person updateablePerson =
-	 * getPerson(id); if (null != updateablePerson) {
-	 * updateablePerson.setSelected(true); em.persist(updateablePerson); }
-	 * 
-	 * }
-	 */
 
 }

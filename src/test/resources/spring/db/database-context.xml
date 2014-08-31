@@ -11,7 +11,7 @@
 
 
     <!-- service and persistence layers scanned -->
-    <context:component-scan base-package="com.example.dao.jpa, com.example.model, com.example.service" />
+    <context:component-scan base-package="com.example.dao.jpa, com.example.service" />
     
     <tx:annotation-driven transaction-manager="transactionManager" />
 
@@ -34,14 +34,12 @@
                     <prop key="hibernate.hbm2ddl.auto">create</prop>
                 </props>
             </property>
-            <!-- 
             <property name="persistenceUnitName" value="contactPU"/>
             <property name="packagesToScan">
             	<list>
             		<value>com.example.model</value>
             	</list>
             </property>
-            -->    
         </bean>
     </beans>
 
@@ -70,14 +68,12 @@
                     <prop key="hibernate.hbm2ddl.auto">update</prop>
                 </props>
             </property>
-            <!-- 
             <property name="persistenceUnitName" value="contactPU"/>
             <property name="packagesToScan">
             	<list>
             		<value>com.example.model</value>
             	</list>
             </property>
-            -->
         </bean>
     </beans>
 

@@ -15,24 +15,30 @@
           <meta name="author" content="RGS Infotech, LLC">
     </jsp:attribute>
 
-	<jsp:attribute name="footer">
-       <p>&copy; RGS Infotech, LLC 2013</p>
-    </jsp:attribute>
-
 	<jsp:body>
-    
-        <div style='margin: 0 0 .5em 0;'>
-                    <div class="row">
-                        <div class="span8 offset2">
-                   <div id='viewPeople' class='btn btn-primary'>View People</div>
+<!--     
+        <div id='loadedImage' class="overlay-image">
+             <img src='<c:url value="resources/img/async-loader.gif"/>' />
+        </div>
 
-                   <!-- AJAX loading image -->
-                   <div id='asyncLoadImage'>
-                                                <img
-							src='<c:url value="resources/img/async-loader.gif"/>' />
-                                        </div>
-                
-                   <div style='clear: both;'></div>
+-->
+        <div class="modal hide" id="loadingProgress"
+			data-backdrop="static" data-keyboard="false">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h1>Refreshing list. Please wait...</h1>
+            </div>
+            <div class="modal-body">
+                <div class="progress progress-striped active">
+                    <div class="bar" style="width: 100%;"></div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div style='margin: 5em 0 .5em 0;'>
+             <div class="row">
+                <div class="span8 offset2">
+                   <div id='viewPeople' class='btn btn-primary'>View People</div>
                 </div>
             </div>
         </div>    
@@ -41,58 +47,43 @@
             <div class="row">
                 <div class="span8 offset2">
             <div id="result"></div>
-                    <div class="page-header">
-                        <h1>
-                            <a
-								href="${pageContext.request.contextPath}/index">Client Management</a>
-                        </h1>
-                    </div>
-
                     <c:if test="${!empty clients}">
                         <h3>Clients</h3>
-                        <table data-people="peopleTable"
-							class="table table-bordered table-striped">
-                            <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>&nbsp;</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <c:forEach var="person" items="${clients}">
-                                <tr>
-                                    <td>${person.lastName}, ${person.firstName}</td>
-                                    <td>
-                                       <form action=""
-												method="post" id="listForm">
-
-
-                                          <input type="submit"
-													class="btn btn-mini"
-													formaction="${pageContext.request.contextPath}/clients/edit/${person.id}"
-													formmethod="get"
-													value="Edit" />
-                                          <input type="submit"
-													class="btn btn-danger btn-mini"
-													formaction="${pageContext.request.contextPath}/clients/delete/${person.id}"
-													formmethod="post"
-													value="Delete" />
-                                       </form>
-                                    </td>
-                                </tr>
-                            </c:forEach>
-                                <tr>
-                                	<td colspan="2">
-									      <input type="submit"
-													class="btn btn-primary"
-													form="listForm"
-													formaction="${pageContext.request.contextPath}/clients/add"
-													formmethod="get"
-													value="Add" />	
-                                	</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <form action="" method="post" id="listForm">
+                                <table id="peopleTable"
+								data-people="peopleTable"
+								class="table table-bordered table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>&nbsp;</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <c:forEach var="person" items="${clients}">
+                                        <tr>
+                                            <td>${person.lastName}, ${person.firstName}</td>
+                                            <td>
+                                                <div class="btn-group">
+                                                    <a
+														href="${pageContext.request.contextPath}/clients/edit/${person.id}"
+														class="btn btn-warning">Edit</a>       
+                                                    <input type="submit"
+														class="btn btn-danger"
+														formaction="${pageContext.request.contextPath}/clients/delete/${person.id}"
+														formmethod="post" value="Delete" />
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </c:forEach>
+                                        <tr>
+                                            <td colspan="2">
+                                                <a href="${pageContext.request.contextPath}/clients/add" class="btn btn-primary">Add</a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                        </form>
                     </c:if>
                 </div>
             </div>
@@ -101,4 +92,3 @@
     </jsp:body>
 
 </t:generic-page>
-

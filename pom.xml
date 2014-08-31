@@ -8,16 +8,28 @@
 
 	<properties>
 		<org.springframework.version>3.2.8.RELEASE</org.springframework.version>
-		<!-- org.springframework.version>3.1.1.RELEASE</org.springframework.version-->
 		<org.springframework.security.version>3.2.3.RELEASE</org.springframework.security.version>
 		<spring.oxm.version>1.5.10</spring.oxm.version>
 		<spring.ws.version>2.1.4.RELEASE</spring.ws.version>
+		<slf4j.version>1.7.6</slf4j.version>
+		<logback.version>1.1.1</logback.version>
 		<glassfish.embedded.tmpdir.override>${project.build.directory}/glassfish-${project.build.finalName}</glassfish.embedded.tmpdir.override>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
 	<dependencies>
 		<!-- Spring deps -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${org.springframework.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>commons-logging</artifactId>
+					<groupId>commons-logging</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -78,12 +90,14 @@
 			<artifactId>spring-context-support</artifactId>
 			<version>${org.springframework.version}</version>
 		</dependency>
+
 		<!-- Object mapper deps -->
 		<dependency>
 			<groupId>org.codehaus.jackson</groupId>
 			<artifactId>jackson-mapper-asl</artifactId>
 			<version>1.9.13</version>
 		</dependency>
+
 		<!-- Servlet and tag lib deps -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -101,6 +115,14 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+
+		<!-- Caching -->
+		<dependency>
+			<groupId>net.sf.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>2.7.4</version>
+		</dependency>
+
 		<!-- DB deps -->
 		<dependency>
 			<groupId>org.hsqldb</groupId>
@@ -122,6 +144,31 @@
 			<artifactId>hibernate-entitymanager</artifactId>
 			<version>3.6.10.Final</version>
 		</dependency>
+
+		<!-- Logging -->
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>${logback.version}</version>
+			<!-- <scope>runtime</scope> -->
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>jcl-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+			<!-- <scope>runtime</scope> --> <!-- some spring dependencies need to compile against jcl -->
+		</dependency>
+		<dependency> <!-- needed to bridge to slf4j for projects that use the log4j APIs directly -->
+			<groupId>org.slf4j</groupId>
+			<artifactId>log4j-over-slf4j</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+
 		<!-- Testing deps -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -135,6 +182,7 @@
 			<version>${org.springframework.version}</version>
 			<scope>test</scope>
 		</dependency>
+
 		<!-- Heroku related -->
 		<dependency>
 			<groupId>com.github.jsimone</groupId>
